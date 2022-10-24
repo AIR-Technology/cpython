@@ -1,7 +1,5 @@
 rm -rf /opt/Coreograph/python
-./configure --enable-shared --enable-optimizations
-make clean; make
-mkdir -p /opt/Coreograph/python/lib/python3.12/lib-dynload
-cp python /opt/Coreograph/python
-cp -r Lib/. /opt/Coreograph/python/lib/python3.12
-cp -r Modules/*.so /opt/Coreograph/python/lib/python3.12/lib-dynload
+mkdir -p /opt/Coreograph/python
+sudo chown -R $USER:$USER /opt/Coreograph/python
+./configure --with-ensurepip=install --prefix /opt/Coreograph/python --exec-prefix /opt/Coreograph/python --enable-shared --enable-optimizations
+make clean; make altinstall

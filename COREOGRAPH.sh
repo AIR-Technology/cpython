@@ -13,6 +13,8 @@ mkdir -p /opt/Coreograph/python
 
 make clean; make altinstall
 
+/opt/Coreograph/python/bin/python3.12 -m pip install --upgrade pip
+
 mkdir -p /opt/Coreograph/python/openssl
 cp ../openssl/openssl-install/lib64/libcrypto.so.3 /opt/Coreograph/python/openssl
 ln -s /opt/Coreograph/python/openssl/libcrypto.so.3 /opt/Coreograph/python/openssl/libcrypto.so 
